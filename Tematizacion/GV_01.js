@@ -310,7 +310,7 @@ let HA01 = L.geoJson(h_01, {style: function (feature){
             "</td></tr></table>"
     }).addTo(map);
     
-let HA02 = L.geoJson(h_02, {style: function (feature){
+let HA0201 = L.geoJson(h_02_01, {style: function (feature){
     return {
                 weight: 0.5,
                 opacity: 1,
@@ -340,7 +340,131 @@ let HA02 = L.geoJson(h_02, {style: function (feature){
             "</td></tr><tr><td>CUS: Coeficiente máximo de Utilización del Suelo (Intensidad Máxima de Construcción): " + layer.feature.properties.SMC_01 +
             "</td></tr></table>"
     }).addTo(map);
-    
+
+let HA0202 = L.geoJson(h_02_02, {style: function (feature){
+    return {
+                weight: 0.5,
+                opacity: 1,
+                fillOpacity: 1,
+                color: '#ffffff',
+                fillColor: '#fff064',
+    };}}).bindPopup(function (layer){
+        return "<div style=text-align:center><h4>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</div><hr><table><tr><td>Clave del Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</td></tr><tr><td>Descripción del Uso de Suelo Normativo: " + layer.feature.properties.NOMUDS_02 +
+            "</td></tr><tr><td>Clave del Distrito: " + layer.feature.properties.CVEDIST +
+            "</td></tr><tr><td>Nombre del Distrito: " + layer.feature.properties.NOMDIST +
+            "</td></tr><tr><td>Clave de la Comunidad: " + layer.feature.properties.CVECOL +
+            "</td></tr><tr><td>Nombre de la Comunidad: " + layer.feature.properties.NOMCOL +
+            "</td></tr><tr><td>Número Máximo de Habitantes por Hectárea: " + layer.feature.properties.DENS_01 +   
+            "</td></tr><tr><td>Número Máximo de viviendas por Hectárea: " + layer.feature.properties.DENS_02 +
+            "</td></tr><tr><td>Metros cuadrados de terreno bruto por vivienda: " + layer.feature.properties.DENS_03 +
+            "</td></tr><tr><td>Metros cuadrados de terreno neto por vivienda: " + layer.feature.properties.DENS_04 +
+            "</td></tr><tr><td>Frente en metros: " + layer.feature.properties.LOTE_01 +
+            "</td></tr><tr><td>Superficie en metros cuadrados: " + layer.feature.properties.LOTE_02 +   
+            "</td></tr><tr><td>Número máximo de viviendas por lote mínimo: " + layer.feature.properties.LOTE_03 +
+            "</td></tr><tr><td>CAS 1: Porcentaje de Área Libre (%): " + layer.feature.properties.SMSC_01 +
+            "</td></tr><tr><td>CAS 2: Porcentaje de Área Verde (%): " + layer.feature.properties.SMSC_02 +
+            "</td></tr><tr><td>COS: Porcentaje máximo de superficie de desplante de la construcción (%) (Coeficiente máximo de Ocupación del Suelo): " + layer.feature.properties.SMDC_01 +
+            "</td></tr><tr><td>Número máximo de niveles de construcción: " + layer.feature.properties.AMC_01 +
+            "</td></tr><tr><td>Altura máxima en metros sobre el nivel de desplante: " + layer.feature.properties.AMC_02 +
+            "</td></tr><tr><td>CUS: Coeficiente máximo de Utilización del Suelo (Intensidad Máxima de Construcción): " + layer.feature.properties.SMC_01 +
+            "</td></tr></table>"
+    }).addTo(map);
+
+let HA0203 = L.geoJson(h_02_03, {style: function (feature){
+    return {
+                weight: 0.5,
+                opacity: 1,
+                fillOpacity: 1,
+                color: '#ffffff',
+                fillColor: '#fff064',
+    };}}).bindPopup(function (layer){
+        return "<div style=text-align:center><h4>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</div><hr><table><tr><td>Clave del Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</td></tr><tr><td>Descripción del Uso de Suelo Normativo: " + layer.feature.properties.NOMUDS_02 +
+            "</td></tr><tr><td>Clave del Distrito: " + layer.feature.properties.CVEDIST +
+            "</td></tr><tr><td>Nombre del Distrito: " + layer.feature.properties.NOMDIST +
+            "</td></tr><tr><td>Clave de la Comunidad: " + layer.feature.properties.CVECOL +
+            "</td></tr><tr><td>Nombre de la Comunidad: " + layer.feature.properties.NOMCOL +
+            "</td></tr><tr><td>Número Máximo de Habitantes por Hectárea: " + layer.feature.properties.DENS_01 +   
+            "</td></tr><tr><td>Número Máximo de viviendas por Hectárea: " + layer.feature.properties.DENS_02 +
+            "</td></tr><tr><td>Metros cuadrados de terreno bruto por vivienda: " + layer.feature.properties.DENS_03 +
+            "</td></tr><tr><td>Metros cuadrados de terreno neto por vivienda: " + layer.feature.properties.DENS_04 +
+            "</td></tr><tr><td>Frente en metros: " + layer.feature.properties.LOTE_01 +
+            "</td></tr><tr><td>Superficie en metros cuadrados: " + layer.feature.properties.LOTE_02 +   
+            "</td></tr><tr><td>Número máximo de viviendas por lote mínimo: " + layer.feature.properties.LOTE_03 +
+            "</td></tr><tr><td>CAS 1: Porcentaje de Área Libre (%): " + layer.feature.properties.SMSC_01 +
+            "</td></tr><tr><td>CAS 2: Porcentaje de Área Verde (%): " + layer.feature.properties.SMSC_02 +
+            "</td></tr><tr><td>COS: Porcentaje máximo de superficie de desplante de la construcción (%) (Coeficiente máximo de Ocupación del Suelo): " + layer.feature.properties.SMDC_01 +
+            "</td></tr><tr><td>Número máximo de niveles de construcción: " + layer.feature.properties.AMC_01 +
+            "</td></tr><tr><td>Altura máxima en metros sobre el nivel de desplante: " + layer.feature.properties.AMC_02 +
+            "</td></tr><tr><td>CUS: Coeficiente máximo de Utilización del Suelo (Intensidad Máxima de Construcción): " + layer.feature.properties.SMC_01 +
+            "</td></tr></table>"
+    }).addTo(map);
+
+let HA0204 = L.geoJson(h_02_04, {style: function (feature){
+    return {
+                weight: 0.5,
+                opacity: 1,
+                fillOpacity: 1,
+                color: '#ffffff',
+                fillColor: '#fff064',
+    };}}).bindPopup(function (layer){
+        return "<div style=text-align:center><h4>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</div><hr><table><tr><td>Clave del Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</td></tr><tr><td>Descripción del Uso de Suelo Normativo: " + layer.feature.properties.NOMUDS_02 +
+            "</td></tr><tr><td>Clave del Distrito: " + layer.feature.properties.CVEDIST +
+            "</td></tr><tr><td>Nombre del Distrito: " + layer.feature.properties.NOMDIST +
+            "</td></tr><tr><td>Clave de la Comunidad: " + layer.feature.properties.CVECOL +
+            "</td></tr><tr><td>Nombre de la Comunidad: " + layer.feature.properties.NOMCOL +
+            "</td></tr><tr><td>Número Máximo de Habitantes por Hectárea: " + layer.feature.properties.DENS_01 +   
+            "</td></tr><tr><td>Número Máximo de viviendas por Hectárea: " + layer.feature.properties.DENS_02 +
+            "</td></tr><tr><td>Metros cuadrados de terreno bruto por vivienda: " + layer.feature.properties.DENS_03 +
+            "</td></tr><tr><td>Metros cuadrados de terreno neto por vivienda: " + layer.feature.properties.DENS_04 +
+            "</td></tr><tr><td>Frente en metros: " + layer.feature.properties.LOTE_01 +
+            "</td></tr><tr><td>Superficie en metros cuadrados: " + layer.feature.properties.LOTE_02 +   
+            "</td></tr><tr><td>Número máximo de viviendas por lote mínimo: " + layer.feature.properties.LOTE_03 +
+            "</td></tr><tr><td>CAS 1: Porcentaje de Área Libre (%): " + layer.feature.properties.SMSC_01 +
+            "</td></tr><tr><td>CAS 2: Porcentaje de Área Verde (%): " + layer.feature.properties.SMSC_02 +
+            "</td></tr><tr><td>COS: Porcentaje máximo de superficie de desplante de la construcción (%) (Coeficiente máximo de Ocupación del Suelo): " + layer.feature.properties.SMDC_01 +
+            "</td></tr><tr><td>Número máximo de niveles de construcción: " + layer.feature.properties.AMC_01 +
+            "</td></tr><tr><td>Altura máxima en metros sobre el nivel de desplante: " + layer.feature.properties.AMC_02 +
+            "</td></tr><tr><td>CUS: Coeficiente máximo de Utilización del Suelo (Intensidad Máxima de Construcción): " + layer.feature.properties.SMC_01 +
+            "</td></tr></table>"
+    }).addTo(map);
+
+let HA0205 = L.geoJson(h_02_05, {style: function (feature){
+    return {
+                weight: 0.5,
+                opacity: 1,
+                fillOpacity: 1,
+                color: '#ffffff',
+                fillColor: '#fff064',
+    };}}).bindPopup(function (layer){
+        return "<div style=text-align:center><h4>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</div><hr><table><tr><td>Clave del Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_02 +
+            "</td></tr><tr><td>Descripción del Uso de Suelo Normativo: " + layer.feature.properties.NOMUDS_02 +
+            "</td></tr><tr><td>Clave del Distrito: " + layer.feature.properties.CVEDIST +
+            "</td></tr><tr><td>Nombre del Distrito: " + layer.feature.properties.NOMDIST +
+            "</td></tr><tr><td>Clave de la Comunidad: " + layer.feature.properties.CVECOL +
+            "</td></tr><tr><td>Nombre de la Comunidad: " + layer.feature.properties.NOMCOL +
+            "</td></tr><tr><td>Número Máximo de Habitantes por Hectárea: " + layer.feature.properties.DENS_01 +   
+            "</td></tr><tr><td>Número Máximo de viviendas por Hectárea: " + layer.feature.properties.DENS_02 +
+            "</td></tr><tr><td>Metros cuadrados de terreno bruto por vivienda: " + layer.feature.properties.DENS_03 +
+            "</td></tr><tr><td>Metros cuadrados de terreno neto por vivienda: " + layer.feature.properties.DENS_04 +
+            "</td></tr><tr><td>Frente en metros: " + layer.feature.properties.LOTE_01 +
+            "</td></tr><tr><td>Superficie en metros cuadrados: " + layer.feature.properties.LOTE_02 +   
+            "</td></tr><tr><td>Número máximo de viviendas por lote mínimo: " + layer.feature.properties.LOTE_03 +
+            "</td></tr><tr><td>CAS 1: Porcentaje de Área Libre (%): " + layer.feature.properties.SMSC_01 +
+            "</td></tr><tr><td>CAS 2: Porcentaje de Área Verde (%): " + layer.feature.properties.SMSC_02 +
+            "</td></tr><tr><td>COS: Porcentaje máximo de superficie de desplante de la construcción (%) (Coeficiente máximo de Ocupación del Suelo): " + layer.feature.properties.SMDC_01 +
+            "</td></tr><tr><td>Número máximo de niveles de construcción: " + layer.feature.properties.AMC_01 +
+            "</td></tr><tr><td>Altura máxima en metros sobre el nivel de desplante: " + layer.feature.properties.AMC_02 +
+            "</td></tr><tr><td>CUS: Coeficiente máximo de Utilización del Suelo (Intensidad Máxima de Construcción): " + layer.feature.properties.SMC_01 +
+            "</td></tr></table>"
+    }).addTo(map);
+
 let HA03 = L.geoJson(h_03, {style: function (feature){
     return {
                 weight: 0.5,
@@ -438,44 +562,44 @@ let CRU01 = L.geoJSON(cru_01, {style: function (feature){
     switch(String(feature.properties['CVEUDS_01'])) {
     case 'CRU-125-A':
     return {
-        color: "#0061ff",
-        weight: 2,
+        color: "#ff0000",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-200-A':
     return {
-        color: "#00ccff",
-        weight: 2,
+        color: "#ffaa00",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-200-B':
     return {
-        color: "#cc00cc",
-        weight: 2,
+        color: "#ffaa00",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-300-A':
     return {
-        color: "#996600",
-        weight: 2,
+        color: "#55ff00",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-300-B':
     return {
-        color: "#663300",
-        weight: 2,
+        color: "#55ff00",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-500-A':
     return {
-        color: "#99cc00",
-        weight: 2,
+        color: "#c3a0d7",
+        weight: 3,
         opacity: 1,
         };
     case 'CRU-300-A':
     return {
-        color: "#ff4b00",
-        weight: 2,
+        color: "#c3a0d7",
+        weight: 3,
         opacity: 1,
         }; 
     };}}).bindPopup(function (layer){
@@ -508,7 +632,11 @@ let overlays = {
         "Equipamiento": EQ01,
         "Equipamiento Especial": EQ02,
         "Habitacional Densidad Alta a Muy Alta": HA01,
-        "Habitacional Densidad Media": HA02,
+        "Habitacional Densidad Media - Del Distrito 01 - Distrito 03": HA0201,
+        "Habitacional Densidad Media - Del Distrito 04 - Distrito 06": HA0202,
+        "Habitacional Densidad Media - Del Distrito 07 - Distrito 08": HA0203,
+        "Habitacional Densidad Media - Distrito 09": HA0204,
+        "Habitacional Densidad Media - Del Distrito 10 - Distrito 27": HA0205,
         "Habitacional Densidad Baja a Muy Baja": HA03,
         "Industria": IN01,
         "Infraestructura": EQ03,
