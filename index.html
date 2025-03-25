@@ -1,0 +1,230 @@
+<!--TIPO DE DOCUMENTO-->
+<!DOCTYPE html>
+<html lang="en">
+	<!--CABEZAL PAGINA WEB-->
+	<head>
+		<!--TITULO (PESTAÑA)-->*	6
+			<title>NAUCALPAN DE JUÁREZ - USO DE SUELO NORMATIVO</title>
+			<link type="image/JPG" rel='shortcut icon' href='./Icon/Icon.NDJ.jpg'></link>
+		<!--META-->
+			<meta charset="utf-8">
+		<!--LINK DE REFERENCIA-->
+			<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet@latest/dist/leaflet.css"></script>
+			<link type="text/css" rel="stylesheet" href="./Control/Control.CoordintaesProjection.css"></script> <!--PLUGIN BY 'EDI HASAJ' - GITHUB:'https://github.com/edihasaj/leaflet-coord-projection'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.FullScreen.css"></script> <!--PLUGIN BY 'BRUNO B' - GITHUB:'https://github.com/brunob/leaflet.fullscreen'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.MiniMap.css"></script> <!--PLUGIN BY 'ROBERT NORDAN' - GITHUB:'https://github.com/Norkart/Leaflet-MiniMap'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.ResetView.css"></script> <!--PLUGIN BY 'WONG HOI SING EDISON' - GITHUB:'https://github.com/drustack/Leaflet.ResetView'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Search.css"></script> <!--PLUGIN BY 'STEFANO CUDINI' - GITHUB:'https://github.com/stefanocudini/leaflet-search'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.SidePanel.css"></script> <!--PLUGIN BY 'MAXWELL ILAI' - GITHUB:'https://github.com/maxwell-ilai/Leaflet.SidePanel'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Style.css"></script> <!--ELABORADO POR 'MR_URBANIST_MX: DIEGO ARMANDO SALAZAR GONZÁLEZ'-->
+			<link type="text/css" rel="stylesheet" href="./Control/Control.Style.Map.css"></script> <!--ELABORADO POR 'MR_URBANIST_MX: DIEGO ARMANDO SALAZAR GONZÁLEZ'-->
+		<!--SCRIPT-->
+			<script type="text/javascript" src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.0/proj4.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
+			<script type="text/javascript" src="./Control/Control.CoordintaesProjection.js"></script> <!--PLUGIN BY 'EDI HASAJ' - GITHUB:'https://github.com/edihasaj/leaflet-coord-projection'-->
+			<script type="text/javascript" src="./Control/Control.FullScreen.js"></script> <!--PLUGIN BY 'BRUNO B' - GITHUB:'https://github.com/brunob/leaflet.fullscreen'-->
+			<script type="text/javascript" src="./Control/Control.MiniMap.js"></script> <!--PLUGIN BY 'ROBERT NORDAN' - GITHUB:'https://github.com/Norkart/Leaflet-MiniMap'-->
+			<script type="text/javascript" src="./Control/Control.ResetView.js"></script> <!--PLUGIN BY 'WONG HOI SING EDISON' - GITHUB:'https://github.com/drustack/Leaflet.ResetView'-->
+			<script type="text/javascript" src="./Control/Control.Search.js"></script> <!--PLUGIN BY 'STEFANO CUDINI' - GITHUB:'https://github.com/stefanocudini/leaflet-search'-->
+			<script type="text/javascript" src="./Control/Control.SidePanel.js"></script> <!--PLUGIN BY 'MAXWELL ILAI' - GITHUB:'https://github.com/maxwell-ilai/Leaflet.SidePanel'-->
+		<!--ARCHIVOS CARTOGRAFÍA GEOJSON-->
+			<!--POLIGONOS-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/AG.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/AV.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/CA.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/CU.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/CRU.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/E_01.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/E_02.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/E_03.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/H_01.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/H_02.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/H_03.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/IND.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+			<script type="text/javascript" src="./GeoJSON/E2_TUS/NAT.js"></script> <!--PROPIEDAD DE LA DIRECCION DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ-->
+	</head>
+	<!--ESTRUCTURA PAGINA WEB-->
+	<body>
+		<!--VISUALIZADOR DE CAPAS-->
+		<section class="mapa">
+			<!--MAPA-->
+			<div id="map">
+				<!--SIDEPANEL LEFT (IZQUIERDO)-->
+				<div id="mySidepanelLeft" 
+					class="sidepanel" 
+					aria-label="side panel" 
+					aria-hidden="false">
+					<div class="sidepanel-inner-wrapper">
+						<nav class="sidepanel-tabs-wrapper"
+							aria-label="sidepanel tab navigation">
+							<ul class="sidepanel-tabs">
+								<li class="sidepanel-tab">
+									<a href="#" 
+									class="sidebar-tab-link"
+									role="tab" 
+									data-tab-link="tab-1">
+									<svg xmlns="http://www.w3.org/2000/svg"
+									     width="24" 
+										 height="24"
+										 fill="currentColor"
+										 class="bi bi-layers-fill"
+										 viewBox="0 0 16 16">
+										<path d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882z"/>
+										<path d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0z"/>
+									</svg>
+									</a>
+								</li>
+
+								<li class="sidepanel-tab">
+									<a href="#" 
+									   class="sidebar-tab-link" 
+									   role="tab" 
+									   data-tab-link="tab-3">
+									<svg xmlns="http://www.w3.org/2000/svg"
+										 fill="currentColor"
+										 width="24"
+										 height="24"
+									     viewBox="0 0 260 169">
+								   		<polygon points="251.32,102.84 231.379,106.967 226.45,111.846 224.474,125.883 217.343,135.365 209.187,133.939 194.5,139.042 
+								   				179.239,134.715 160.274,102.514 158.449,81.473 162.002,69.964 147.489,64.335 133.428,39.541 126.297,33.66 116.84,34.061 
+								   				111.786,40.817 101.803,34.862 97.975,25.43 86.016,15.045 72.48,14.645 66.3,18.599 49.963,17.773 20.364,4.337 2,2.01 
+								   				10.682,29.433 23.242,42.868 23.611,48.786 18.588,54.051 35.148,65.727 36.902,77.62 52.064,90.881 49.587,78.896 42.832,60.832 
+												26.219,34.136 19.564,26.229 18.888,9.816 33.425,18.224 39.229,39.064 63.048,65.186 62.898,65.41 63.766,70.309 91.395,101.488 
+												95.873,110.995 95.023,118.501 91.42,121.079 101.128,132.838 132.702,150.126 173.709,164.012 188.896,156.132 207.886,166.99 
+												217.669,157.982 229.828,154.329 219.595,146.549 223.248,141.044 240.011,138.318 245.59,132.663 252.246,132.813 253.226,119.389 
+												258,108.394 "/>
+							   		</svg>
+									</a>
+								</li>
+								<li class="sidepanel-tab">
+									<a href="#"
+									class="sidebar-tab-link"
+									role="tab"
+									data-tab-link="tab-4">
+									<svg xmlns="http://www.w3.org/2000/svg"
+									     width="24"
+										 height="24"
+										 fill="currentColor"
+										 class="bi bi-file-person"
+										 viewBox="0 0 16 16">
+										<path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+										<path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+									</svg>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="sidepanel-content-wrapper">
+							<div class="sidepanel-content">
+								<div class="sidepanel-tab-content" data-tab-content="tab-1">
+									 <h4>USO DE SUELO NORMATIVO - PMDU 2025 - 2027</h4>
+									 <p>El siguiente visulizador de cartografía espacial tiene el objetivo de apoyar a los diferentes departamento de
+										la Dirección de Desarrollo Urbana, tanto en materia de consulta, como de información básica.
+										<br></br>
+										Se agruparon los 98 Usos de Suelo Normativos existentes en Naucalpan de Juárez de la siguiente forma:
+										<br></br>
+										01. Agrícola</br>
+										02. Área Verde</br>
+										03. Cuerpos de Agua</br>
+										04. Centros Urbanos</br>
+										05. Equipamiento</br>
+										06. Equipamiento Especial</br>
+										07. Habitacional Densidad Alta a Muy Alta</br>
+										08. Habitacional Densidad Media</br>
+										09. Habitacional Densidad Baja a Muy Baja</br>
+										10. Industria</br>
+										11. Natural</br>
+									</p>
+								</div>
+
+								<div class="sidepanel-tab-content" data-tab-content="tab-3">
+									<h4>
+									   ACERCA DE MÁS GEOPORTALES
+								   </h4>
+									<p>
+									   Conoce los demás geovisores complementarios de la Dirección de Desarrollo Urbano  
+									   <br></br>
+									   <a href="index.html" class="btn">
+										   Uso de Suelo Normativo
+									   </a>
+									   <br></br>
+									   <a href="02_limites_administrativos.html" class="btn">
+										   Límites Administrativos
+									   </a>
+									   <br></br>
+									   <a href="03_Equipamiento_e_Infraestructura.html" class="btn">
+										   Equipamientos e Infraestructura
+									   </a>
+									   <br></br>
+									   <a href="04_Movilidad _y_Transporte.html" class="btn">
+										   Movilidad y Transporte
+									   </a>
+									   <br></br>
+									   <a href="05_Tenencia_de_la_tierra.html" class="btn">
+										   Tenencia de la Tierra
+									   </a>
+									   <br></br>
+									   <a href="06_Riesgos_y_Vulnerabilidades.html" class="btn">
+										   Riesgos y Vulnerabilidades
+									   </a>
+									   <br></br>
+									   <a href="07_Proyectos_Estrategicos.html" class="btn">
+										   Proyectos Estrategícos
+									   </a>
+									</p>
+							   </div>
+								<div class="sidepanel-tab-content" data-tab-content="tab-4">
+									<h4>ACERCA DE</h4>
+									<p>
+										<a href="https://sedui.edomex.gob.mx/naucalpan" class="btn">PMDU (2022 - 2024)</a>
+										<br></br>
+									</p>
+									<h4>CRÉDITOS SERVICIOS WEB</h4>
+									<p>
+										| © "Leaflet" | y complementos |</br>
+										| © "OpenStreetMap" |</br>
+										| © "Humanitarian" |</br>
+										| © "ESRI" |</br>
+									</p>
+									<h4>CRÉDITOS CARTOGRAFÍA</h4>
+									<p>
+										| NAUCALPAN, 2024 (PLAN MUNICIPAL DE DESARROLLO URBANO DE NAUCALPAN DE JUÁREZ - 2024) |</br>
+									</p>
+									<h4>CRÉDITOS DESARROLLADOR WEB</h4>
+									<p>	
+										| Dirección de Desarrollo Urbano |</br>
+										| Subdirección de Geoestadística Tecnologías de la Información |</br>
+										| Subdirección de Geoestadística Tecnologías de la Información |</br>
+										<br></br>
+										| Geográfa Carolina Vargas Maldonado |</br>
+										| Supervisora del Geovisor / Cartografía |</br>
+										<br></br>
+										| Urbanista Diego Armando Salazar González |</br>
+										| Desarrollador del Geovisor / Cartografía |</br>
+										<br></br>
+										<br></br>
+										| Todos los derechos reservados |</br>
+										| Año 2025 |</br>
+										<br></br>
+										| © "Mr Urbanist MX" |</br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidepanel-toggle-container">
+						<button class="sidepanel-toggle-button"
+								type="button" 
+								aria-label="toggle side panel">
+						</button>
+					</div>
+				</div>
+				<script type="text/javascript" src="./Tematizacion/GV_01.js"></script>
+		</section>
+	</body>
+</html>
+<!-- ES SIGUIENTE GEOVISOR FUE CREADO POR EL GRUPO DE ESPECIALISTAS DEL DEPARTAMENTO GEOESTADÍSTICA Y TECNOLOGÍAS DE LA INFORMACIÓN -->
+<!-- DE LA DIRECCIÓN DE DESARROLLLO URBANO DEL MUNICIPIO DE NAUCALPAN DE JUÁREZ. EL GRUPO DE ESPECIALISTAS ESTA CONFORMADO POR -->
+<!-- GEOGRAFA CAROLINA VARGAS MALDONADO, JEFA DE DEPARTAMENTO DE GEOESTADISTICA Y TECNOLOGIAS DE LA INFORMACIÓN -->
+<!-- URBANISTA DIEGO ARMANDO SALAZAR GONZÁLEZ, JEFE DE OFICINA DE GEOESTADISTICA Y TECNOLOGIAS DE LA INFORMACIÓN -->

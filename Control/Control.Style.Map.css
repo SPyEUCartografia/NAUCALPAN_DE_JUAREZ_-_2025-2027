@@ -1,0 +1,33 @@
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.info {
+    height: 35px;
+    width: 450px;
+    font: sans-serif;
+    text-align: center;
+    background: #3E0E1C;
+}
+.info h3 {
+    margin: 8.5px;
+    color: #DEC8A1;
+}
+.sidepanel-content {
+    font-size: 1rem;
+}
+.sidepanel-content h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.sidepanel-content a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #956036;
+    transition: color 0.3s ease-in;
+}
+.sidepanel-content a:hover {
+    color: #DEC8A1;
+    text-decoration: underline;
+}
