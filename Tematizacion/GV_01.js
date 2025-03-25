@@ -603,16 +603,11 @@ let CRU01 = L.geoJSON(cru_01, {style: function (feature){
         opacity: 1,
         }; 
     };}}).bindPopup(function (layer){
-    return "<div style=text-align:center><h4>Clave ISA: " + layer.feature.properties.CVE_ISA +
-            "</div><hr><table><tr><td>Descripción ISA: " + layer.feature.properties.DESCR_ISA +
-            "</td></tr><tr><td>Distancia (km): " + layer.feature.properties.DISTANCIA +
-            "</td></tr><tr><td>Fuente de la cartografía: " + layer.feature.properties.FUENTE +
-            "</td></tr></table>"
-    }).bindTooltip(function (layer){
-    return "<div style=text-align:center><h4>Clave ISA: " + layer.feature.properties.CVE_ISA +
-            "</div><hr><table><tr><td>Descripción ISA: " + layer.feature.properties.DESCR_ISA +
-            "</td></tr><tr><td>Distancia (km): " + layer.feature.properties.DISTANCIA +
-            "</td></tr><tr><td>Fuente de la cartografía: " + layer.feature.properties.FUENTE +
+    return "<div style=text-align:center><h4>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_01 +
+            "</div><hr><table><tr><td>Clave del Distrito: " + layer.feature.properties.CVEDIST  +
+            "</td></tr><tr><td>Nombre del Distrito: " + layer.feature.properties.NOMDIST +
+            "</td></tr><tr><td>Clave Uso de Suelo Normativo: " + layer.feature.properties.CVEUDS_01 +
+            "</td></tr><tr><td>Descripción del Uso de Suelo Normativo: " + layer.feature.properties.NOMUDS_01 +
             "</td></tr></table>"
     }).addTo(map);
 
