@@ -611,6 +611,27 @@ let CRU01 = L.geoJSON(cru_01, {style: function (feature){
             "</td></tr></table>"
     }).addTo(map);
 
+    let LIMIT03 = L.geoJson(lim_03, {style: function (feature){
+        return {
+            weight: 1.5,
+            opacity: 1,
+            color: '#666666',
+        };}}).addTo(map);
+    
+    let LIMIT02 = L.geoJson(lim_02, {style: function (feature){
+        return {
+            weight: 2.5,
+            opacity: 1,
+            color: '#404040',
+        };}}).addTo(map);
+    
+    let LIMIT01 = L.geoJson(lim_01, {style: function (feature){
+        return {
+            weight: 3.5,
+            opacity: 1,
+            color: '#000000',
+        };}}).addTo(map);
+
 // ACTIVAR CAPAS //
 let baseLayers = {
         'OpenStreetMap Humanitarian': hdm,
@@ -636,6 +657,9 @@ let overlays = {
         "Industria": IN01,
         "Infraestructura": EQ03,
         "Corredores Urbanos": CRU01,
+        "Delimitación Administrativa - IGECEM": LIMIT01,
+        "Delimitación Distritos - Plan Municipal": LIMIT02,
+        "Delimitación Comunidades - Bando Municipal": LIMIT03,
     };
 let layerControl = L.control.layers(baseLayers, overlays, {collapsed: false,}).addTo(map);
 // RESET VIEW (REGRESAR VISTA IN INICIAL) //
